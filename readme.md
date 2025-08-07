@@ -73,7 +73,7 @@ Sherpa-ONNX 同样不包含 ONNX Runtime，需要从官方获取并配置：
 2. 从 GitHub Releases 获取模型包：  
    ```bash
    wget https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-en-v0_19.tar.bz2
-````
+   ```
 
 3. 解压至指定目录（如 `~/models/`）：
 
@@ -102,17 +102,11 @@ Sherpa-ONNX 同样不包含 ONNX Runtime，需要从官方获取并配置：
    java -jar sherpa-onnx-java-server-1.0.0.jar --sherpa.pool.size=1
    ```
 2. 在浏览器中访问测试页面：
-
-   ```
-   ```
-
 [http://localhost/tts/test](http://localhost/tts/test)
 
-```
+
 3. 根据页面提示输入文本，验证 TTS 生成效果。
 
 ---
 
 至此，您已完成 Sherpa-ONNX Java 服务的安装、模型下载及测试启动。如有任何问题，请参考官方文档或在社区讨论。
-
-```
