@@ -14,17 +14,19 @@ public class PooledNonStreamingTtsKokoroEn {
   private static final BlockingQueue<OfflineTts> pool;
 
   static {
+    String userHome = System.getProperty("user.home");
+    String model = userHome + "/models/kokoro-en-v0_19/model.onnx";
+    String voices = userHome + "/models/kokoro-en-v0_19/voices.bin";
+    String tokens = userHome + "/models/kokoro-en-v0_19/tokens.txt";
+    String dataDir = userHome + "/models/kokoro-en-v0_19/espeak-ng-data";
+    
     Integer poolSize = EnvUtils.getInteger("sherpa.pool.size");
     if (poolSize == null) {
       poolSize = Runtime.getRuntime().availableProcessors();
     }
     pool = new LinkedBlockingQueue<>(poolSize);
 
-    String userHome = System.getProperty("user.home");
-    String model = userHome + "/models/kokoro-en-v0_19/model.onnx";
-    String voices = userHome + "/models/kokoro-en-v0_19/voices.bin";
-    String tokens = userHome + "/models/kokoro-en-v0_19/tokens.txt";
-    String dataDir = userHome + "/models/kokoro-en-v0_19/espeak-ng-data";
+
 
     OfflineTtsKokoroModelConfig kokoroModelConfig = OfflineTtsKokoroModelConfig.builder().setModel(model)
         .setVoices(voices).setTokens(tokens).setDataDir(dataDir).build();
