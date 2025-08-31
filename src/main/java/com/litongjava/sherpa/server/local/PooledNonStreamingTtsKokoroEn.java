@@ -1,4 +1,4 @@
-package com.litongjava.sherpa.server;
+package com.litongjava.sherpa.server.local;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

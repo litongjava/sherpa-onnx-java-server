@@ -1,6 +1,7 @@
 package com.litongjava.sherpa.server;
 
 import com.litongjava.annotation.AComponentScan;
+import com.litongjava.sherpa.server.config.SherpaAppConfig;
 import com.litongjava.tio.boot.TioApplication;
 
 @AComponentScan
