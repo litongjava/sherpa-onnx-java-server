@@ -9,7 +9,8 @@ import com.litongjava.tio.http.server.router.HttpRequestRouter;
 
 public class SherpaAppConfig implements BootConfiguration {
 
-  public void config() {
+  @Override
+  public void config() throws Exception {
     new File("cache/audio").mkdirs();
     // 获取 HTTP 请求路由器
     TioBootServer server = TioBootServer.me();
